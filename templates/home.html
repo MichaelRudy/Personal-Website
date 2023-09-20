@@ -7,7 +7,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Michael Rudy</title>
+	<title>{{info['Name']}}</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -45,19 +45,18 @@
 
          <ul id="nav" class="nav">
             <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Interests</a></li>
-            <li><a class="smoothscroll" href="#testimonials">Projects</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+            <li><a class="smoothscroll" href="#about">{{info['headline'][0]}}</a></li>
+            <li><a class="smoothscroll" href="#resume">{{info['headline'][1]}}</a></li>
+            <li><a class="smoothscroll" href="#projects">{{info['headline'][2]}}</a></li>
+            <li><a class="smoothscroll" href="#contact">{{info['headline'][3]}}</a></li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
 
       <div class="row banner">
          <div class="banner-text">
-            <h1 class="responsive-headline">{{info['name']}}</h1>
-            <h3>Self-learning <span>computer science</span>, <span>software engineering</span> through
+            <h1 class="responsive-headline">{{info['Name']}}</h1>
+            <h3>Self-learning <span>computer science</span> and <span>software engineering</span> through
             research and development.</h3>
             <hr />
             <ul class="social">
@@ -101,10 +100,10 @@
 
                   <h2>Contact Details</h2>
                   <p class="address">
-						   <span>Michael Rudy</span><br>
-						   <span>Washington, D.C.<br>
+						   <span>{{info['Name']}}</span><br>
+						   <span>{{info['location']}}<br>
                      </span><br>
-                     <span>michaelrudy4@icloud.com</span>
+                     <span>{{info['email']}}</span>
 					   </p>
                </div>
             </div> <!-- end row -->
@@ -115,6 +114,38 @@
 
    </section> <!-- About Section End-->
 
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>{{info['education']['school']}}</h3>
+                  <p class="info">{{info['education']['degree']}} <span>&bull;</span> <em class="date">{{info['education']['date']}}</em></p>
+
+                  <p>
+                  {{info['education']['desc']}}
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
 
    <!-- footer
    ================================================== -->
@@ -123,15 +154,10 @@
       <div class="row">
 
          <div class="twelve columns">
-
             <ul class="social-links">
-               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+               <li><a href="#"><i class="fa fa-github"></i></a></li>
             </ul>
 
             <ul class="copyright">
@@ -146,6 +172,8 @@
       </div>
 
    </footer> <!-- Footer End-->
+
+   
 
    <!-- Java Script
    ================================================== -->
